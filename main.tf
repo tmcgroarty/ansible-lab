@@ -3,10 +3,11 @@ provider "aws" {
 }
 
 resource "aws_instance" "ubuntu_server" {
-  ami                    = "ami-0d1b5a8c13042c939"   # Ubuntu 24.04 LTS in us-east-2
+  ami                    = "ami-0d1b5a8c13042c939"
   instance_type          = "t2.micro"
   key_name               = "OHIO"
-  vpc_security_group_ids = ["sg-04d4338bc7e62a46b"]
+  subnet_id              = "subnet-0a6338b1259311ef9"
+  vpc_security_group_ids = ["sg-0915280fa120808de"]
 
   tags = {
     Name = "Ubuntu-Server"
