@@ -9,3 +9,11 @@ module "ec2" {
 module "kms" {
   source = "./modules/kms"
 }
+
+module "iam_role" {
+  source = "./modules/iam_role"
+}
+
+module "rds" {
+  source = "./modules/rds"
+}
